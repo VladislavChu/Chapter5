@@ -17,15 +17,27 @@ namespace SimpleClassExample
             currentSpeed = 0;
         }
 
-        public Car(string cn)
-        {
-            carName = cn;
-        }
+        public Car(string cn) => carName = cn;
+        
 
         public Car(string cn, int cs)
         {
             carName = cn;
             currentSpeed = cs;
+        }
+
+        public Car (string cn, int cs, out bool inDanger)
+        {
+            carName = cn;
+            currentSpeed = cs;
+            if (cs > 100)
+            {
+                inDanger = true;
+            }
+            else
+            {
+                inDanger = false;
+            }
         }
 
 
