@@ -23,3 +23,9 @@ Console.ReadLine();
 
 Motorcycle mc = new Motorcycle(5);
 mc.PopAWheely();
+Console.ReadLine();
+
+Motorcycle c = new Motorcycle(5);
+c.SetDriverName("Tiny");
+c.PopAWheely();
+Console.WriteLine($"Rider name is {c.name}");
