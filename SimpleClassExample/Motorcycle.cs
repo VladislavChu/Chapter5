@@ -10,7 +10,7 @@ namespace SimpleClassExample
     {
         public int driverIntensity;
         public string driverName;
-        //public void SetDriverName(string name) => this.name = name;
+        public void SetDriverName(string name) => driverName = name;
         public void PopAWheely()
         {
             for (int i = 0; i <= driverIntensity; i++)
@@ -28,16 +28,26 @@ namespace SimpleClassExample
         //    driverIntensity = intensity;
         //}
 
-        public Motorcycle() { }
+        public Motorcycle() 
+        {
+            Console.WriteLine("In Default ctor");
+        }
 
         public Motorcycle(int intensity)
-            : this(intensity, "") { }
+            : this(intensity, "") 
+        {
+            Console.WriteLine("In ctor taking an int");
+        }
 
         public Motorcycle(string name)
-            : this(0, name) { }
-
-        public Motorcycle(int intensity, string name)
+            : this(0, name) 
         {
+            Console.WriteLine("In ctor taking a string");
+        }
+
+        public Motorcycle(int intensity = 0, string name = "")
+        {
+            Console.WriteLine("In master ctors");
             if (intensity > 10)
             {
                 intensity = 10;

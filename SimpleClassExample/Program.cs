@@ -21,11 +21,14 @@ for (int i = 0; i < 10; i++)
 Console.ReadLine();
 
 
-Motorcycle mc = new Motorcycle(5);
-mc.PopAWheely();
-Console.ReadLine();
-
 Motorcycle c = new Motorcycle(5);
 c.SetDriverName("Tiny");
 c.PopAWheely();
-Console.WriteLine($"Rider name is {c.name}");
+Console.WriteLine($"Rider name is {c.driverName}");
+
+Motorcycle m1 = new Motorcycle();
+Console.WriteLine($"Name: {m1.driverName}, Intensity: {m1.driverIntensity}");
+Motorcycle m2 = new Motorcycle(name: "Tiny");
+Console.WriteLine($"Name: {m2.driverName}, Intensity: {m2.driverIntensity}");
+Motorcycle m3 = new Motorcycle(7);
+Console.WriteLine($"Name: {m3.driverName}, Intensity: {m3.driverIntensity}");
