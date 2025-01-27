@@ -43,15 +43,15 @@ namespace EmployeeApp
             get { return _empId; }
             set { _empId = value; }
         }
-        public float CurrentPay
+        public float Pay
         {
             get { return _currPay; }
             set { _currPay = value; }
         }
         public int Age
         {
-            get { return _empAge; }
-            set { _empAge = value; }
+            get => _empAge;
+            set => _empAge = value;
         }
 
         /*
@@ -77,20 +77,20 @@ namespace EmployeeApp
         public Employee(string name, int id, float pay) :this (name, id, pay, 0) {}
         public Employee(string name, int id, float pay, int age)
         {
-            _empName = name;
-            _empId = id;
-            _currPay = pay;
-            _empAge = age;
+            Name = name;
+            Id = id;
+            Pay = pay;
+            Age = age;
         }
 
         //methods
-        public void GiveBonus(float amount) => _currPay += amount;
+        public void GiveBonus(float amount) => Pay += amount;
         public void DisplayStatus()
         {
-            Console.WriteLine($"Name: {_empName}");
-            Console.WriteLine($"ID: {_empId}");
-            Console.WriteLine($"Pay: {_currPay}");
-            Console.WriteLine($"Age: {_empAge}");
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"ID: {Id}");
+            Console.WriteLine($"Pay: {Pay}");
+            Console.WriteLine($"Age: {Age}");
         }
     }
 }
