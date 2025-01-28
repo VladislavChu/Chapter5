@@ -10,6 +10,7 @@ namespace EmployeeApp
         private int _empId;
         private float _currPay;
         private int _empAge;
+        private string _empSSN;
 
         //properties
         public string Name
@@ -37,10 +38,10 @@ namespace EmployeeApp
                 }
             }
         }
-
         public int Id
         {
-            get { return _empId; }
+            //get { return _empId; }
+            //record only!
             set { _empId = value; }
         }
         public float Pay
@@ -52,6 +53,11 @@ namespace EmployeeApp
         {
             get => _empAge;
             set => _empAge = value;
+        }
+        public string SocialSecurityNumber
+        {
+            get => _empSSN;
+            private set => _empSSN = value;
         }
 
         /*
@@ -74,13 +80,14 @@ namespace EmployeeApp
 
         //ctors
         public Employee() { }
-        public Employee(string name, int id, float pay) :this (name, id, pay, 0) {}
-        public Employee(string name, int id, float pay, int age)
+        public Employee(string name, int id, float pay) :this (name, id, pay, 0, "") {}
+        public Employee(string name, int id, float pay, int age, string ssn)
         {
             Name = name;
             Id = id;
             Pay = pay;
             Age = age;
+            SocialSecurityNumber = ssn;
         }
 
         //methods
@@ -88,9 +95,10 @@ namespace EmployeeApp
         public void DisplayStatus()
         {
             Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"ID: {Id}");
+            //Console.WriteLine($"ID: {Id}");
             Console.WriteLine($"Pay: {Pay}");
             Console.WriteLine($"Age: {Age}");
+            Console.WriteLine($"SSN: {_empSSN}");
         }
     }
 }

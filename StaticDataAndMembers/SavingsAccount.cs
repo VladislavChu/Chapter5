@@ -8,7 +8,7 @@ namespace StaticDataAndMembers
 {
     class SavingsAccount
     {
-        public static double currInterestRate;
+        private static double _currInterestRate = 0.04;
 
         public double currBalance;
 
@@ -20,11 +20,16 @@ namespace StaticDataAndMembers
         static SavingsAccount()
         {
             Console.WriteLine("In static ctor!");
-            currInterestRate = 0.4;
+            //currInterestRate = 0.4;
         }
 
+        public static double InterestRate
+        {
+            get { return _currInterestRate; }
+            set { _currInterestRate = value; }
+        }
 
-        public static void SetInterestRate(double newRate) => currInterestRate = newRate;
-        public static double GetInterestRate() => currInterestRate;
+        //public static void SetInterestRate(double newRate) => currInterestRate = newRate;
+        //public static double GetInterestRate() => currInterestRate;
     }
 }
