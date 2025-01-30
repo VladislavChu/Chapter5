@@ -11,6 +11,7 @@ namespace EmployeeApp
         private float _currPay;
         private int _empAge;
         private string _empSSN;
+        private EmployeePayTypeEnum _payType;
 
         //properties
         public string Name
@@ -59,6 +60,11 @@ namespace EmployeeApp
             get => _empSSN;
             private set => _empSSN = value;
         }
+        public EmployeePayTypeEnum PayType
+        {
+            get => _payType;
+            set => _payType = value;
+        }
 
         /*
         //getter
@@ -80,18 +86,30 @@ namespace EmployeeApp
 
         //ctors
         public Employee() { }
-        public Employee(string name, int id, float pay) :this (name, id, pay, 0, "") {}
-        public Employee(string name, int id, float pay, int age, string ssn)
+        public Employee(string name, int id, float pay) :this (name, id, pay, 0, "", EmployeePayTypeEnum.Salaried) {}
+        public Employee(string name, int id, float pay, int age, string ssn, EmployeePayTypeEnum payType)
         {
             Name = name;
             Id = id;
             Pay = pay;
             Age = age;
             SocialSecurityNumber = ssn;
+            PayType = payType;
         }
 
         //methods
-        public void GiveBonus(float amount) => Pay += amount;
+        public void GiveBonus(float amount)
+        {
+            Pay = this switch
+            {
+                { PayType: EmployeePayTypeEnum.Commmission } => Pay += .10F * amount,
+                { PayType: EmployeePayTypeEnum.Hourly } => Pay += 40F * amount / 2080F,
+                { PayType: EmployeePayTypeEnum.Salaried } => Pay += amount,
+                _ => Pay += 0
+            };
+            
+        }
+            
         public void DisplayStatus()
         {
             Console.WriteLine($"Name: {Name}");

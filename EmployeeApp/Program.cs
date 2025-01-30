@@ -5,11 +5,12 @@ using EmployeeApp;
 
 Console.WriteLine("***** Fun with Encapsulation *****\n");
 
-Employee emp = new Employee("Marvin", 456, 30_000);
+Employee emp = new Employee("Marvin", 456, 30_000, 31, "1921688821", EmployeePayTypeEnum.Hourly);
 //emp.Name = "stacy";
 //emp.SetName("Vladik");
-emp.GiveBonus(100_000_000);
-emp.DisplayStatus();
+Console.WriteLine(emp.Pay);
+emp.GiveBonus(10);
+Console.WriteLine(emp.Pay);
 
 Console.ReadLine();
 
