@@ -11,6 +11,7 @@ SavingsAccount s1 = new SavingsAccount(50);
 //SavingsAccount.SetInterestRate(0.8);
 
 SavingsAccount s2 = new SavingsAccount(100);
+Console.WriteLine($"Interest Rate is: {SavingsAccount.InterestRate = 64}");
 Console.WriteLine($"Interest Rate is: {SavingsAccount.InterestRate}");
 
 //Console.WriteLine($"Interest Rate is: {SavingsAccount.GetInterestRate()}");

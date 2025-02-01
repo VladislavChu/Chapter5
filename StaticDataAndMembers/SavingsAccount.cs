@@ -8,7 +8,7 @@ namespace StaticDataAndMembers
 {
     class SavingsAccount
     {
-        static double _currInterestRate = 0.04;
+        private static double _currInterestRate = 0.04;
 
         public double currBalance;
 
