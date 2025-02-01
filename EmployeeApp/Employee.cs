@@ -66,6 +66,8 @@ namespace EmployeeApp
             set => _payType = value;
         }
 
+
+
         /*
         //getter
         public string GetName () => _empName;
