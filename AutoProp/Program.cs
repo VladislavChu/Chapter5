@@ -23,7 +23,7 @@ Console.WriteLine($"Number of Cars: {oldCars.NumberOfCars}");
 Console.WriteLine(oldCars.MyAuto.CarName);
 Console.WriteLine(oldCars.MyAuto.Speed);
 Console.WriteLine(oldCars.MyAuto.Color);
-Console.WriteLine(oldCars.MyAuto.DisplayStats);
+Console.WriteLine(oldCars.MyAuto);
 
 
 
