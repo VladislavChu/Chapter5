@@ -12,8 +12,9 @@ firstPoint.DisplayStats();
 Point anotherPoint = new Point(20, 20);
 anotherPoint.DisplayStats();
 */
-Point finalPoint = new Point {X = 30, Y = 30};
+Point finalPoint = new Point { X = 30, Y = 30 };
 finalPoint.DisplayStats();
+
 Console.ReadLine();
 
 ReadOnlyPointAfterCreation firstReadOnlyPoint = new ReadOnlyPointAfterCreation(20, 20);
@@ -29,6 +30,6 @@ secondReadOnlyPoint.DisplayStats();
  * secondReadOnlyPoint.Y = 10;
 */
 
-Point goldPoint = new Point (PointColorEnum.Gold) {X = 90, Y = 20};
+Point goldPoint = new Point(PointColorEnum.LightBlue) { X = 90, Y = 20 };
 goldPoint.DisplayStats();
 

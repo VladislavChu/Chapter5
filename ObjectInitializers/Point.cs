@@ -10,18 +10,30 @@ namespace ObjectInitializers
     {
         public int X { get; set; }
         public int Y { get; set; }
+        public PointColorEnum Color { get; set; }
 
-        /* public Point(int xVal, int yVal)
+        public Point(int xVal, int yVal)
         {
             X = xVal;
             Y = yVal;
+            Color = PointColorEnum.Gold;
         }
 
-        public Point() {}
-        */
+        public Point(PointColorEnum ptColor)
+        {
+            Color = ptColor;
+        }
+
+        //public Point() : this (PointColorEnum.Gold) {}
+        public Point()
+        {
+            
+        }
+
         public void DisplayStats()
         {
             Console.WriteLine("[{0}, {1}]", X, Y);
+            Console.WriteLine($"Point is {Color}");
         }
     }
 }
