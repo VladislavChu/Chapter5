@@ -33,3 +33,12 @@ secondReadOnlyPoint.DisplayStats();
 Point goldPoint = new Point(PointColorEnum.LightBlue) { X = 90, Y = 20 };
 goldPoint.DisplayStats();
 
+
+Rectangle myRect = new Rectangle
+{
+    TopLeft = new Point { X = 10, Y = 10, Color = PointColorEnum.LightBlue },
+    BottomRight = new Point { X = 200, Y = 200, Color = PointColorEnum.BloodRed }
+};
+
+myRect.DisplayStats();
+
