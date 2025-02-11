@@ -8,9 +8,9 @@ namespace ConstData
 {
     class MyMathClass
     {
-        public readonly double PI;
+        public static readonly double PI;
 
-        public MyMathClass()
+        static MyMathClass()
         {
             PI = 3.14;
         }
