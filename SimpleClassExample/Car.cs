@@ -44,5 +44,6 @@ namespace SimpleClassExample
         public void PrintState() => Console.WriteLine($"{carName} is going {currentSpeed} MPH");
 
         public void SpeedUp(int delta) => currentSpeed += delta;
+
     }
 }
